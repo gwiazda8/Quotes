@@ -1,4 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import '~@angular/material/theming';
 @import '~@angular/cdk/overlay-prebuilt.css';
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-teal);
+$my-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-app-warn: mat-palette($mat-red);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+$my-app-dark-primary: mat-palette($mat-blue-grey);
+$my-app-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$my-app-dark-warn: mat-palette($mat-deep-orange);
+
+$my-app-dark-theme: mat-dark-theme($my-app-dark-primary, $my-app-dark-accent, $my-app-dark-warn);
+
+.my-app-dark-theme {
+  @include angular-material-theme($my-app-dark-theme);
+}
+
+
+html, body, app-root, .site, mat-sidenav-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+p, a {
+  font-size: 14px;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.full-width {
+  width: 100%;
+}
 

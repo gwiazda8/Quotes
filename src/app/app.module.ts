@@ -14,26 +14,24 @@ import { NewProjectComponent } from './project/new-project/new-project.component
 import { ProjectItemComponent } from './project/project-item/project-item.component';
 import { ProjectListComponent } from './project/project-list/project-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginModule } from './login/login.module';
+import { ProjectModule } from './project/project.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderComponent,
-    SidebarComponent,
-    LoginComponent,
-    RegisterComponent,
-    InviteComponent,
-    NewProjectComponent,
-    ProjectItemComponent,
-    ProjectListComponent
+
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoginModule,
+    SharedModule,
+    ProjectModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
